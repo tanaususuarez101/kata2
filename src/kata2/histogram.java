@@ -9,12 +9,10 @@ public class histogram {
 
     public int[] getData() {
         return data;
-    }
-    
+    }    
     public histogram(int[] data) {
         this.data = data;
-    }
-    
+    }    
     public Map getHistogram(){
         Map <Integer,Integer> histogram = new HashMap<>();
         for (int value : data) histogram.put(value, histogram.containsKey(value) ? histogram.get(value) + 1 : 1);
