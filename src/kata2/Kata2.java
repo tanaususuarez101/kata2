@@ -17,9 +17,6 @@ public class Kata2 {
         }
         
     }
-    private static void printf(Map hist){
-        
-    }
     
     
     
