@@ -4,24 +4,18 @@ package kata2;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Histogram {
-
-    static Iterable<Object> keySet() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    private final int[] data;
-
-    public int[] getData() {
-        return data;
-    }    
+public class Histogram<T> {
     
-    public Histogram(int[] data) {
+    private final T[] data;
+    public Histogram(T[] data) {
         this.data = data;
+    }    
+    public T[] getData() {
+        return data;
     }
-    
     public Map getHistogram(){
         Map <Integer,Integer> histogram = new HashMap<>();
-        for (int value : data) histogram.put(value, histogram.containsKey(value) ? histogram.get(value) + 1 : 1);
+        for (T value : data) histogram.put((Integer)value, histogram.containsKey(value) ? histogram.get(value) + 1 : 1);
         return histogram;
     }
 }
