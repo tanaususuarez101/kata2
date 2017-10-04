@@ -7,10 +7,10 @@ public class Kata2 {
 
 
     public static void main(String[] args) {
-        Integer[]data = {1,1,1,2,2,0,0,1,2,0,1,1,1,2,2,2};
+        String[] data = {"Rosa", "Pepe", "Juan", "Pepe", "Pepe", "Rosa"};
         
         Histogram histo = new Histogram(data);
-        Map<Integer, Integer> histogr = histo.getHistogram();
+        Map<String, Integer> histogr = histo.getHistogram();
         
         for(Object key : histogr.keySet()){
             System.out.println(key + " -> " + histogr.get(key) + " veces");
